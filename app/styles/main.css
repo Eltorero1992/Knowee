@@ -1,0 +1,343 @@
+
+/*
+*
+General
+*
+*/
+
+html,
+body {
+	max-width: 100%;
+}
+
+
+
+/*
+*
+Navbar
+*
+*/
+
+
+.navigationBar{
+	width: 100%;
+}
+
+.title{
+	height: 70px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 55px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	color: orange;
+}
+
+.subtitle{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	color: orange;
+	margin-top: 10px;
+}
+
+/*
+*
+Main Content
+*
+*/
+
+.mainContent{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 25px;
+	font-family: "Montserrat";
+}
+
+.leftBanner{
+	width: 22.5%;
+}
+
+.middleBanner{
+	width: 55%;
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	border-radius: 16px;
+	display: flex;
+}
+
+.rightBanner{
+	width: 22.5%;
+}
+
+
+/*
+*
+Ad
+*
+*/
+
+.ad{
+	margin: 5px;
+	padding: 5px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.leftAdBanner{
+	width: 25%;
+	padding-right: 15px;
+}
+
+.userPicture{
+	width: 100%;
+	border-radius: 16px;
+}
+
+.contactButton{
+	margin-top: 15px;
+}
+
+#contactButtom{
+	height: 45px;
+	font-size: 20px;
+}
+
+/*
+*
+Description
+*
+*/
+
+.rightAdBanner{
+	width: 75%;
+}
+
+.rightAdBanner-Top{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.name{
+	font-size: 20px;
+ 	width: 55%;
+}
+
+.languages{
+	line-height: 25px;
+	vertical-align: middle;
+	text-align: right;
+	width: 45%;
+
+}
+
+.adDescription{
+	margin-top: 10px;
+	text-align: justify;
+	line-height: normal;
+}
+
+.btn{
+	width: 100%;
+}
+
+.btn-warning{
+	color: white !important;
+	background-color: orange !important;
+	border-color: orange !important;
+}
+
+.rightAdBanner-Bottom{
+	padding-top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	vertical-align: middle;
+}
+
+.availability{
+	width: 70%;
+}
+
+.rating{
+	width: 30%;
+	text-align:right;
+}
+
+/*
+*
+Footer
+*
+*/
+
+a {
+	color: grey !important;
+}
+
+.footer{
+	width: 100%;
+	margin-top: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footerLeftColumn,
+.footerRightColumn{
+	width: 5%;
+}
+
+.footerMiddleColumn{
+	font-size: 12px;
+	width: 90%;
+	color: grey !important;
+	font-family: "Montserrat";
+	border-top: 1px solid #cccccc;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footerMDLeft,
+.footerMDRight{
+	padding-top: 25px;
+	padding-right: 20px;
+}
+
+
+.footerMDLeft{
+	text-align: justify;
+	width: 75%;
+}
+
+.footerMDRight{
+	text-align: right;
+	width: 25%;
+}
+
+/*
+*
+Media Queries
+*
+*/
+
+/* ----------- Mobile Devices ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	.leftBanner,
+	.rightBanner {
+		width: 5%;
+	}
+
+	.middleBanner{
+		width: 90%;
+	}
+
+	.contactButton{
+		width: 100%;
+	}
+
+	.name,
+	.languages,
+	.availability,
+	.rating {
+		width: 100%;
+		max-width: 100%;
+		font-size: 6vw;
+		text-align: center;
+		padding-bottom: 5px;
+	}
+
+	.languages,
+	.availability,
+	.rating{
+		font-size: 4vw;
+	}
+
+	.name{
+		margin-top: 10px;
+	}
+
+	.footerMDRight{
+		padding-right: 0;
+	}
+
+	.footerTitle{
+		font-size: 5vw;
+		font-weight: bold;
+	}
+
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen
+  and (min-device-width: 481px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  	.leftBanner,
+	.rightBanner {
+		width: 5%;
+	}
+
+	.middleBanner {
+		width: 90%;
+	}
+
+	.photoPlaceholder {
+		max-width: 30%;
+		height: auto;
+	}
+
+	.adDetails {
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.name,
+	.rating {
+		width: 50%;
+	}
+
+	.languages {
+		width: 30%;
+	}
+
+	.availability {
+		width: 70%;
+		text-align: right;
+	}
+
+	.contactButtom {
+		width: 100%;
+	}
+
+	#contactButtom {
+		float: right;
+		width: 200px;
+	}
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}

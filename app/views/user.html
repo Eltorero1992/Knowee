@@ -1,0 +1,44 @@
+      <div ng-repeat="teacher in user.teachers">
+
+        <div class="photoPlaceholder">
+          <img  class= "userPicture" ng-src="{{teacher.photo}}" alt="{{teacher.
+          name}}">
+        </div>
+
+        <div class="adDetails">
+
+          <div class="name"><a ui-sref="teacher({name: teacher.name})">
+            {{teacher.name}}</a>
+          </div>
+
+          <div class="rating">
+            {{teacher.rating}}
+          <span ng-if="teacher.rating > 4"> You are good!
+
+          </span>
+          </div>
+
+          <button ng-click="user.increment(teacher)">+</button>
+
+          <button ng-click="user.decrement(teacher)">-</button>
+
+          <div class="languages">
+            {{teacher.languages}}
+          </div>
+
+          <div class="availability">
+             {{teacher.availability}}
+          </div>
+
+          <div class="adDescription">
+            {{teacher.description}}
+          </div>
+
+        </div>
+
+        <div class="contactButtom">
+          <button type="button" class="btn btn-warning" id="contactButtom">Contact</button>
+          <span class="contactVisits"></span>
+        </div>
+
+      </div>
