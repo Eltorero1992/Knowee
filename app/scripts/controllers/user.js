@@ -1,14 +1,15 @@
 'use strict';
 
 angular.module('knoweeApp')
-	.controller('UserCtrl', ['teacherFinder', function (item) {
+	.controller('UserCtrl', function (userFinder,user) {
 		// Define this for controller scope vm = view model
-	var vm = this;
+	console.log(user);
+	this.teachers = user;
 
-	item.getUser().then(function(data){
-		console.log(data)
-		vm.teachers = data;
-	});
+	// userFinder.getUsers().then(function onSuccess(data){
+	// 	vm.teachers = data;
+	// 	return vm.teachers;
+	// })
 
 	this.increment = function (item) {
 		item.rating += 1;
@@ -18,5 +19,5 @@ angular.module('knoweeApp')
 		item.rating -= 1;
 	};
 
-}]);
+});
 
