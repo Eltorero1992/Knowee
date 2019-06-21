@@ -1,15 +1,9 @@
 'use strict';
 
 angular.module('knoweeApp')
-	.controller('UserCtrl', function (userFinder,user) {
-		// Define this for controller scope vm = view model
-	console.log(user);
-	this.teachers = user;
+	.controller('UserCtrl', function (user) {
 
-	// userFinder.getUsers().then(function onSuccess(data){
-	// 	vm.teachers = data;
-	// 	return vm.teachers;
-	// })
+	this.teachers = user;
 
 	this.increment = function (item) {
 		item.rating += 1;

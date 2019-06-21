@@ -20,7 +20,12 @@ angular
 			.state('teacher', {
 				url:'/teacher/:name',
 				templateUrl: 'views/teacher.html',
-				controller: 'TeacherCtrl as teacher'
+				controller: 'TeacherCtrl as teacher',
+				resolve: {
+					data: function($stateParams,userFinder) {
+						return userFinder.getUserFile($stateParams.name);
+					}
+				}
 
 			});
 

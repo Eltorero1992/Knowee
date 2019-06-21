@@ -15,4 +15,9 @@ angular.module('knoweeApp')
     	return $.get('users.json');
     };
 
+    this.getUserFile = function (name) {
+    	let userItemFile = name + '.json';
+    	return $.get(userItemFile);
+    };
+
   });
